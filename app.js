@@ -9,7 +9,9 @@ app.use(bodyparser.urlencoded({ extended: false }));
 
 app.use(admin);
 app.use(shop);
-
+app.get('*',(req,res)=>{
+    res.send("<h1>404 Page not Found</h1>")
+})
 
 
 
